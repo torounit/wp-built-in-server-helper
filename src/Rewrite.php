@@ -21,11 +21,23 @@ Class Rewrite {
 	 * @return bool
 	 */
 	public function got_url_rewrite( $current ) {
+
+		if ( $this->is_wp_cli_server() ) {
+			return true;
+		}
+
 		if ( $this->is_built_in_server() and ! $this->exsist_permalink_extension( get_option( 'permalink_structure' ) ) ) {
 			return true;
 		}
 
 		return $current;
+	}
+
+	/**
+	 * @return bool
+	 */
+	private function is_wp_cli_server() {
+		return (bool) getenv('WP_CLI_PHP_USED');
 	}
 
 	/**
