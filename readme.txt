@@ -12,23 +12,21 @@ Helper for development WordPress Site with PHP built-in server.
 
 == Description ==
 
-Helper for development WordPress Site with `wp server`.
+Helper for development WordPress Site with PHP built-in server.
 
 Requires PHP version 5.4 or higher.
 
+[This Plugin published on GitHub.](https://github.com/torounit/wp-built-in-server-helper)
+
 === Features ===
 
-* Remove `index.php` for rewrite settings.
-
-
+* Remove `index.php` for rewrite settings if permalink structure does not contain `.`.
 
 
 == Installation ==
 
-
-1. Upload `plugin-name.php` to the `/wp-content/plugins/` directory
-1. Activate the plugin through the 'Plugins' menu in WordPress
-1. Place `<?php do_action('plugin_name_hook'); ?>` in your templates
+1. Upload the entire `/built-in-server-helper` directory to the `/wp-content/plugins/` directory.
+2. Activate Simple Post Type Permalinks through the 'Plugins' menu in WordPress.
 
 
 == Changelog ==
