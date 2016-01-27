@@ -12,7 +12,7 @@ Class Rewrite {
 
 		add_filter( 'got_url_rewrite', [ $this, 'got_url_rewrite' ] );
 		add_filter( 'pre_update_option_permalink_structure', [ $this, 'permalink_structure_filter' ] );
-		
+
 	}
 
 	/**
