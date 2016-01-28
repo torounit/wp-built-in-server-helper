@@ -19,7 +19,7 @@ Requires PHP version 5.4 or higher.
 [This Plugin published on GitHub.](https://github.com/torounit/wp-built-in-server-helper)
 
 === Features ===
-
+* Remove `index.php` for rewrite settings if using `wp server`.
 * Remove `index.php` for rewrite settings if permalink structure does not contain `.`.
 
 
