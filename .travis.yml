@@ -1,38 +1,27 @@
 language: php
-
 sudo: false
-
 notifications:
   email:
     on_success: never
     on_failure: change
-
-
 php:
-  - 5.4
-  - 5.6
-  - 7
-  - hhvm
-
+- 5.4
+- 5.6
+- 7
 matrix:
   include:
-    - php: 5.4
-      env: WP_VERSION=latest WP_MULTISITE=0 WP_PULUGIN_DEPLOY=1
-  allow_failures:
-    - php: hhvm
-
-
+  - php: 5.4
+    env: WP_VERSION=latest WP_MULTISITE=0 WP_PULUGIN_DEPLOY=1
 before_script:
-  - bash bin/install-wp-tests.sh wordpress_test root '' localhost $WP_VERSION
-
+- bash bin/install-wp-tests.sh wordpress_test root '' localhost $WP_VERSION
 script: phpunit
-
+after_success: curl -L https://raw.githubusercontent.com/miya0001/travis2wpplugin/master/deploy.sh | bash
 env:
   matrix:
-    - WP_VERSION=4.4 WP_MULTISITE=0
-    - WP_VERSION=trunk WP_MULTISITE=0
-
+  - WP_VERSION=4.4 WP_MULTISITE=0
+  - WP_VERSION=trunk WP_MULTISITE=0
   global:
-    - SVN_REPO: https://plugins.svn.wordpress.org/built-in-server-helper/
-    - GH_REF: https://github.com/torounit/wp-built-in-server-helper.git
-    - secure: "G6ugr3v6cOwWCh8sDsqn4NfJ74zO68n1xwDmPOjkhMr0jhnwdNcPgQzVA5WXf/8yV5I910UAm3XQrT5CajXgwt2Tcsli67Olu3R8Nqcwh0lqAK5Q4LdD5RoP2Ie2jY/ih4Z56CZEhiuZbG9Qp/YeN8j/kIEDf/y/VwzoX/s3OXI="
+  - SVN_REPO: https://plugins.svn.wordpress.org/built-in-server-helper/
+
+  - secure: G6ugr3v6cOwWCh8sDsqn4NfJ74zO68n1xwDmPOjkhMr0jhnwdNcPgQzVA5WXf/8yV5I910UAm3XQrT5CajXgwt2Tcsli67Olu3R8Nqcwh0lqAK5Q4LdD5RoP2Ie2jY/ih4Z56CZEhiuZbG9Qp/YeN8j/kIEDf/y/VwzoX/s3OXI=
+  - secure: eU8Gp9NgD+roX7wDk/tFdbthCYAYTITq4qj4xjBKLLFpVNq7y+ta54yNLmJK8DcLik8/C5MiYmrHOjKtVLL/i4AVx14r6YnRUG0BD4NQrXv49FiMxzfdkiz5qfUBX43ldQ2MgCe2lKJUf6kOkiHFwEuuna8FtZOLtqWhlTcbiPeZkyrljNGn1ZpNM6indGccxBBGhNTUerMtAXgPPEiZt8Ed9s/Io3O+8FafGYOUolvLn1pc4SIdqB4a7eW/3gy54GqboFz6FXW+dCgwxu734ZQcG99pYmbh4qv/V6STmozZiStF4o52bOEpTUREv8g/ZGGjZghKOxcV6wLCZ4KNW1DaAG6un6PLbTLBQ0MVM+JueWi2Vzmay0tTfEI+8pzfpB9CmXOFSHppJSg4fCK3VtRPH5yDkmDOfsGGPVz+ELc4N4Ut/W2wjJSK/GgRcmTHugMe4tlgkYzX+qo3jgB2M2iPtvyt+DnuPMXVijdxDcjSPeUovG90Q5ybDwybYBK9d1AR8Vk+EwCPp5O/JIg9y/vrX24K0QC02IGtp1X92yVltON6SN3MTStvyvRCmM5alV2kGmNhm0Z04AGilCX4EBo434crRNtquefEgYwJH48FkU5sL1FCxGQ0Xw03B1wSFwMGPoR+amDM8roZXpsl3RjoVcT1gjsHlj3H2Rtl7pQ=

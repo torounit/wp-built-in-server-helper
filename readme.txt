@@ -1,4 +1,4 @@
-=== Built-in-server-helper ===
+=== Built-in Server Helper ===
 Contributors: Toro_Unit
 Donate link: http://www.amazon.co.jp/registry/wishlist/COKSXS25MVQV
 Tags: built-in server, development
@@ -31,6 +31,6 @@ Requires PHP version 5.4 or higher.
 
 == Changelog ==
 
-= 0.0.1 =
+= 1.0.0 =
 * First Release.
 
