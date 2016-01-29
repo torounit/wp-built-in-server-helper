@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Built-in Server Helper
- * Version: 1.0.1
+ * Version: 1.0.2
  * Description: Helper for development WordPress Site with PHP built-in server.
  * Author: Toro_Unit
  * Author URI: http://torounit.com
@@ -13,7 +13,10 @@
 
 
 function built_in_server_helper_notices() {
-	echo '<div class="error"><p>[Built-in Server Helper] Built-in Server Helper do not support multisite.</p></div>';
+	echo sprintf(
+		'<div class="error"><p>%s</p></div>',
+		__( '[Built-in Server Helper] Built-in Server Helper do not support multisite.', 'built-in-server-helper')
+	);
 }
 
 
