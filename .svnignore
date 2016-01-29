@@ -4,6 +4,7 @@
 .gitignore
 .travis.yml
 Gruntfile.js
+.editorconfig
 LINGUAS
 Makefile
 README.md

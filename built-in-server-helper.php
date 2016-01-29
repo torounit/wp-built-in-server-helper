@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Built-in Server Helper
- * Version: 1.0.2
+ * Version: 1.0.3
  * Description: Helper for development WordPress Site with PHP built-in server.
  * Author: Toro_Unit
  * Author URI: http://torounit.com

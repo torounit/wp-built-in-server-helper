@@ -4,7 +4,7 @@ Donate link: http://www.amazon.co.jp/registry/wishlist/COKSXS25MVQV
 Tags: built-in server, development
 Requires at least: 4.4
 Tested up to: 4.4
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -18,7 +18,8 @@ Requires PHP version 5.4 or higher.
 
 [This Plugin published on GitHub.](https://github.com/torounit/wp-built-in-server-helper)
 
-=== Features ===
+= Features =
+
 * Remove `index.php` for rewrite settings if using `wp server`.
 * Remove `index.php` for rewrite settings if permalink structure does not contain `.`.
 
@@ -30,6 +31,10 @@ Requires PHP version 5.4 or higher.
 
 
 == Changelog ==
+
+= 1.0.3 =
+* Small Fix.
+
 
 = 1.0.0 =
 * First Release.
