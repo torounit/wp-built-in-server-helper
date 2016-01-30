@@ -1,6 +1,19 @@
 # Built-in Server Helper
+
+Contributors: Toro_Unit
+
 Donate link: http://www.amazon.co.jp/registry/wishlist/COKSXS25MVQV
+
+Tags: built-in server, development
+
+Requires at least: 4.4
+
+Tested up to: 4.4
+
+Stable tag: 1.0.3
+
 License: GPLv2 or later
+
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Helper for development WordPress Site with PHP built-in server.
