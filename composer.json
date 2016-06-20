@@ -1,0 +1,12 @@
+{
+    "name": "torounit/wp-built-in-server-helper",
+    "description": "Helper for development WordPress Site with PHP built-in server.",
+    "type": "wordpress-plugin",
+    "authors": [
+        {
+            "name": "Hiroshi Urabe",
+            "email": "mail@torounit.com"
+        }
+    ],
+    "require": {}
+}
